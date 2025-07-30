@@ -1,0 +1,96 @@
+/* Базовые сбросы */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Основной контейнер */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Сайдбар */
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px 0;
+}
+
+.sidebar-title {
+  padding: 0 20px 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #34495e;
+  margin-bottom: 20px;
+}
+
+.nav-section {
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.nav-section-title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #ecf0f1;
+  text-align: left;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.nav-link:hover {
+  background: #34495e;
+}
+
+.nav-link.active {
+  background: #3498db;
+  color: white;
+}
+
+/* Основное содержимое */
+.content {
+  flex: 1;
+  padding: 30px;
+  background: #ecf0f1;
+}
+
+.page {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+:root, body, #root {
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+        padding: 0;
+}
