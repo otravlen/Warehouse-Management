@@ -1,4 +1,4 @@
-﻿namespace Backend.Database_Layer
+﻿namespace Backend.DatabaseLayer
 {
     public interface IBaseRepository<T>
     {

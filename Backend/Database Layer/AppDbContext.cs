@@ -1,7 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using DotNetEnv;
-using System.ComponentModel.DataAnnotations;
-using static Backend.Database_Layer.Entities;
 
 namespace Backend.DatabaseLayer
 {
