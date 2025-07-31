@@ -15,6 +15,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.WebHost.UseWebRoot("ClientApp/dist"); 
 
 builder.Services.AddControllers();
+builder.Services.RegisterRepositories();
 
 builder.Services.AddSpaStaticFiles(configuration =>
 {
@@ -22,6 +23,12 @@ builder.Services.AddSpaStaticFiles(configuration =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+	var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+	db.Database.EnsureCreated();
+}
 
 app.UseStaticFiles();
 app.UseSpaStaticFiles();
