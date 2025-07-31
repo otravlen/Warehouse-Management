@@ -55,6 +55,7 @@
       "commandLineArgs": "/C npm run dev",
       "workingDirectory": "ClientApp",
       "launchBrowser": false
-     }
-   }
+    }
   }
+}
+

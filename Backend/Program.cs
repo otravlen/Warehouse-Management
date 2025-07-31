@@ -1,9 +1,16 @@
-using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+ï»¿using Backend;
+using Backend.DatabaseLayer;
+using Microsoft.EntityFrameworkCore;
+
+var config = new Config();
 
 var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 {
-	WebRootPath = "ClientApp/dist" // ��������� ���������� ����
+	WebRootPath = "ClientApp/dist" // Ð£ÐºÐ°Ð·ÑÐ²Ð°ÐµÐ¼ Ð¿ÑÐ°Ð²Ð¸Ð»ÑÐ½ÑÐ¹ Ð¿ÑÑÑ
 });
+
+builder.Services.AddDbContext<AppDbContext>(options =>
+	options.UseSqlServer(config.GetConnectionString()));
 
 builder.WebHost.UseWebRoot("ClientApp/dist"); 
 
