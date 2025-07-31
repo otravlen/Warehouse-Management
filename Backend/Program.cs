@@ -1,4 +1,4 @@
-using Backend;
+﻿using Backend;
 using Backend.DatabaseLayer;
 using Microsoft.EntityFrameworkCore;
 
@@ -38,7 +38,8 @@ app.UseSpa(spa =>
 
 	if (app.Environment.IsDevelopment())
 	{
-		System.Threading.Thread.Sleep(2000);
+		if (app.Environment.IsDevelopment())
+			System.Threading.Thread.Sleep(2000);
 		spa.UseProxyToSpaDevelopmentServer("http://localhost:3000");
 	}
 });
